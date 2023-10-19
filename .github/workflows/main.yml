@@ -1,0 +1,13 @@
+name: Deploy Code
+
+on: [push]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🔎 Check IP
+        run: curl https://api.ipify.org
